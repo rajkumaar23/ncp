@@ -26,6 +26,10 @@ nav.bg-white {
   opacity: 90%;
 }
 
+.light-opacity {
+  opacity: 60%;
+}
+
 #pref-lang {
   width: 300px;
 }
@@ -51,10 +55,19 @@ nav.bg-white {
   margin-top: -5px;
 }
 
+.ft-container,
+.light-container {
+  border: thin solid rgb(223, 221, 221);
+  padding: 20px;
+}
+
+a.my-auto {
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .ft-container {
   height: 400px;
-  border: thin solid  rgb(223, 221, 221);
-  padding: 20px;
 }
 
 @media (max-width: 320px) {
