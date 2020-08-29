@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee PayRoll Management System | Rajkumar S</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body class="container p-5">
+<header class="h1 text-center text-uppercase text-info" style="font-family: 'Comic Sans MS',serif">
+    Add New Employee
+</header>
+<hr>
+<main class="section card">
+    <form class="card-body" action="./success.html" method="get" id="emp-form" onsubmit="return $('.has-error').length === 0 && $('#designation').val() > 0">
+        <div class="form-group row">
+            <label for="eid" class="col-sm-2 col-form-label">Employee ID</label>
+            <div class="col-sm-10">
+                <input id="eid" class="form-control" data-validator-label="Employee ID"
+                       data-validator="required|numeric" required>
+                <div class="form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="ename" class="col-sm-2 col-form-label">Employee Name</label>
+            <div class="col-sm-10">
+                <input id="ename" class="form-control" data-validator-label="Employee Name"
+                       data-validator="required|regex:^[a-zA-Z]+((['. -][a-zA-Z ])?[a-zA-Z]*)*$" required>
+                <div class="form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="qual" class="col-sm-2 col-form-label">Qualification</label>
+            <div class="col-sm-10">
+                <input id="qual" class="form-control" data-validator-label="Qualification"
+                       data-validator="required|regex:[A-Za-z0-9]+" required>
+                <div class="form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="designation" class="col-sm-2 col-form-label">Qualification</label>
+            <div class="col-sm-10">
+                <select class="custom-select" id="designation" required>
+                    <option selected disabled>Choose your designation</option>
+                    <option value="1">Software Engineer 1</option>
+                    <option value="2">Software Engineer 2</option>
+                    <option value="3">Software Engineer 3</option>
+                </select>
+                <div class="form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="salary" class="col-sm-2 col-form-label">Salary</label>
+            <div class="col-sm-10">
+                <input id="salary" class="form-control" data-validator-label="Salary"
+                       data-validator="required|numeric" required>
+                <div class="form-control-feedback"></div>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-6">
+                <button type="submit" class="btn btn-primary w-100">Add record</button>
+            </div>
+            <div class="col-sm-6">
+                <button type="reset" class="btn btn-danger w-100">Exit</button>
+            </div>
+        </div>
+    </form>
+</main>
+<footer class="card-footer mt-2 text-center">
+    &copy; Rajkumar S
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+<script src="./validator.js"></script>
+<script>
+    $(document).on('keyup', '[data-validator]', function () {
+        new Validator($(this));
+    });
+</script>
+</body>
+</html>
