@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS-Assignment-2 | Rajkumar S</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="validate-date.js"></script>
+    <script src="table-of-contents.js"></script>
+    <script src="multiplication-table.js"></script>
+    <script src="digital-clock.js"></script>
+    <script src="freq-players.js"></script>
+  </head>
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">
+          JavaScript Assignment | Built by
+          <a href="http://rajkumaar.co.in">Rajkumar</a> | CB.EN.U4CSE17651 |
+          &hearts;
+        </h1>
+        <section class="has-background-info-light section box">
+          <p class="title">Question 1</p>
+          <p class="subtitle">
+            Write a Javascript program to create a multiplication table by
+            getting the number of rows and columns from the user
+          </p>
+          <hr />
+          <div class="field">
+            <label class="label">Enter number of rows</label>
+            <div class="control">
+              <input id="tableRows" class="input" type="text" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label">Enter number of columns</label>
+            <div class="control">
+              <input id="tableColumns" class="input" type="text" />
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button
+                class="button is-link is-fullwidth"
+                onclick="generateTable()"
+              >
+                Generate table
+              </button>
+            </div>
+          </div>
+          <div class="table-container has-text-centered">
+            <table
+              class="table is-bordered is-link"
+              id="multiplication-table"
+            ></table>
+          </div>
+        </section>
+        <hr />
+        <section class="has-background-primary-light section box">
+          <p class="title">Question 2</p>
+          <p class="subtitle">
+            Write a Javascript program to validate the Date of Birth entered by
+            the user. It should be in the form DD-MM-YYYY
+          </p>
+          <hr />
+          <div class="field">
+            <label class="label">Enter the date in format DD-MM-YYYY</label>
+            <div class="control">
+              <input id="dateInput" class="input" type="text" />
+              <p id="dateFeedback"></p>
+            </div>
+          </div>
+          <div class="field">
+            <div class="control">
+              <button
+                class="button is-link is-fullwidth"
+                onclick="validateDate()"
+              >
+                Validate
+              </button>
+            </div>
+          </div>
+        </section>
+        <hr />
+        <section class="has-background-info-light section box">
+          <p class="title">Question 3</p>
+          <p class="subtitle">
+            Define a function that takes as inputs chapter title and the page
+            number on which that chapter begins. Your function should return a
+            string or display as an entry for the table of contents. Number of
+            Chapters to display at the minimum is 3. Make sure that the chapter
+            title and page numbers with dots are aligned properly.
+          </p>
+          <hr />
+          <div class="field">
+            <label class="label">Enter chapter title</label>
+            <div class="control">
+              <input id="chapTitle" class="input" type="text" />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label"
+              >Enter starting page number of the chapter</label
+            >
+            <div class="control">
+              <input id="pageNo" class="input" type="text" />
+            </div>
+          </div>
+          <p class="help is-danger is-size-5">Insert at least 3 records to be listed in the table</p>
+          <div class="field is-grouped row">
+            <div class="control column">
+              <button
+                class="button is-link is-fullwidth"
+                onclick="submitChapter()"
+              >
+                Add chapter to table of contents
+              </button>
+            </div>
+            <div class="control column">
+                <button class="button is-danger is-fullwidth" onclick="clearTable()">
+                    Clear table
+                </button>
+            </div>
+          </div>
+          <div class="box has-background-secondary-light">
+            <p class="title has-text-centered">Table of Contents <span id="indexTitle"></span></p>
+            <div
+              id="tableOfContents"
+              class="has-text-centered is-family-monospace"
+            ></div>
+          </div>
+        </section>
+        <hr />
+        <section class="has-background-primary-light section box">
+          <p class="title">Question 4</p>
+          <p class="subtitle">
+            Using JS date, simulate and display the date and time in digital
+            format.
+          </p>
+          <hr />
+          <div id="clock">
+            <p class="date" id="date"></p>
+            <p class="time" id="time"></p>
+          </div>
+        </section>
+        <section class="has-background-info-light section box">
+          <p class="title">Question 5</p>
+          <p class="subtitle">
+            Using JavaScript arrays and Math do the following. Assume there are
+            5 players each with different character role to play. The players
+            are chosen randomly with their numbers from 1 to 5. The role they
+            play is display with text and an image. Run for 10 trails and list
+            the frequency of each player.
+          </p>
+          <hr />
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Role</th>
+                <th>Frequency</th>
+              </tr>
+            </thead>
+            <tbody id="playersTable"></tbody>
+          </table>
+          <div class="field">
+            <div class="control">
+              <button
+                class="button is-link is-fullwidth"
+                onclick="generatePlayers()"
+              >
+                Generate
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+    </section>
+  </body>
+</html>
