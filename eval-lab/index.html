@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Eval Lab | Rajkumar S</title>
+    <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+            integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+            crossorigin="anonymous"
+    />
+    <script src="main.js"></script>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">
+        <img height="70px" width="140px" src="google.jpg" alt="Google Logo">
+    </a>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="form-inline ml-auto my-2 my-lg-0">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Sign in</button>
+        </form>
+    </div>
+</nav>
+<section class="row" style="margin: 30px; !important;">
+    <div class="col">
+        <h2 class="heading text-danger">Create a new Google Account</h2>
+        <div class="row mt-4">
+            <div class="col">
+                <img class="img-thumbnail" src="img1.png"/>
+            </div>
+            <div class="col">
+                <h3 class="text-secondary">
+                    Your Google Account is more than just Gmail.
+                </h3>
+                <p class="text-secondary">
+                    Talk, chat, share, schedule, store, organize, collaborate, discover,
+                    and create. Use Google produts from Gmail to Google+ to YouTube, view
+                    your search history, all with one username and password, all backed up
+                    all the time and easy to find at (you guessed it) Google.com
+                </p>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col">
+                <img class="img-thumbnail" src="img2.png"/>
+            </div>
+            <div class="col">
+                <h3 class="text-secondary">
+                    Take it all with you.
+                </h3>
+                <p class="text-secondary">
+                    A Google Account lets you access all your stuff - Gmail, photos, and
+                    mroe - from any device. Search by taking pictures, or by voice. Get
+                    free turn-by-turn navigation, upload your pictures automatically, and
+                    even buy things with your phone using Google Wallet.
+                </p>
+            </div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col">
+                <img class="img-thumbnail" src="img3.png"/>
+            </div>
+            <div class="col">
+                <h3 class="text-secondary">
+                    Share a little. Or share a lot.
+                </h3>
+                <p class="text-secondary">
+                    Share selectively with friends, family (maybe even your boss) on
+                    Google+. Start a video call with friends, send a message to a group
+                    all at once, or just follow posts from people who fascinate you. Your
+                    call.
+                </p>
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+                <img class="img-thumbnail" src="img2.png"/>
+            </div>
+            <div class="col">
+                <h3 class="text-secondary">
+                    Work in the future.
+                </h3>
+                <p class="text-secondary">
+                    A Google Account lets you access all your stuff - Gmail, photos, and
+                    mroe - from any device. Search by taking pictures, or by voice. Get
+                    free turn-by-turn navigation, upload your pictures automatically, and
+                    even buy things with your phone using Google Wallet.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <form action="success.html" class="bg-light p-4 m-5" onsubmit="return true; validateForm()">
+            <div class="form-group">
+                <label><b>Name</b></label>
+                <div class="row">
+                    <div class="col">
+                        <input id="firstName" type="text" class="form-control" placeholder="First"/>
+                    </div>
+                    <div class="col">
+                        <input id="lastName" type="text" class="form-control" placeholder="Last"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><b>Choose your username</b></label>
+                <input
+                        id="username"
+                        type="email"
+                        class="form-control"
+                        placeholder="example@gmail.com"
+                />
+            </div>
+            <div class="form-group">
+                <label><b>Create a password</b></label>
+                <input id="password" type="password" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label><b>Confirm your password</b></label>
+                <input id="confirmPassword" type="password" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label><b>Birthday</b></label>
+                <div class="row">
+                    <div class="col-sm-6">
+                        <select id="monthOfBirth" class="form-control">
+                            <option selected disabled>Month</option>
+                            <option value="January">January</option>
+                            <option value="February">February</option>
+                            <option value="March">March</option>
+                            <option value="April">April</option>
+                            <option value="May">May</option>
+                            <option value="June">June</option>
+                            <option value="July">July</option>
+                            <option value="August">August</option>
+                            <option value="September">September</option>
+                            <option value="October">October</option>
+                            <option value="November">November</option>
+                            <option value="December">December</option>
+                        </select>
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="dayOfBirth" type="text" class="form-control" placeholder="Day"/>
+                    </div>
+                    <div class="col-sm-3">
+                        <input id="yearOfBirth" type="text" class="form-control" placeholder="Year"/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><b>Gender</b></label>
+                <select id="gender" class="form-control">
+                    <option selected disabled>I am ...</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label><b>Mobile phone</b></label>
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <select id="isdCode" class="input-group-text">
+                            <option selected disabled>Code</option>
+                            <option>+91</option>
+                            <option>+1</option>
+                            <option>+81</option>
+                        </select>
+                    </div>
+                    <input id="mobile" type="text" class="form-control"/>
+                </div>
+            </div>
+            <div class="form-group">
+                <label><b>Your current email address</b></label>
+                <input id="currentEmail" type="email" class="form-control"/>
+            </div>
+            <div class="form-group">
+                <label><b>Prove you're not a robot</b></label>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox"/>
+                    <label class="form-check-label">
+                        Skip this verification (phone verification may be required)
+                    </label>
+                </div>
+            </div>
+            <img class="img-thumbnail mb-3" src="captcha.png"/>
+            <div class="form-group">
+                <label><b>Location</b></label>
+                <select id="location" class="form-control">
+                    <option>India</option>
+                    <option>USA</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input id="terms" class="form-check-input" type="checkbox"/>
+                    <label class="form-check-label">
+                        I agree to the Google <a href="">Terms of Service</a> and
+                        <a href="">Privacy Policy</a>
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-check">
+                    <input id="personalization" class="form-check-input" type="checkbox"/>
+                    <label class="form-check-label">
+                        Google may use my account information to personalize +1's on content
+                        and ads on non-Google websites.
+                        <a href="">About personalization</a>
+                    </label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary float-right mr-3">
+                Next step
+            </button>
+            <br>
+            <p class="mt-5">
+                <a href="">Learn more</a> about why we ask for this information.
+            </p>
+        </form>
+    </div>
+</section>
+</body>
+</html>
