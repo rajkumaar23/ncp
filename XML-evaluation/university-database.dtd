@@ -1,0 +1,17 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT university (semester)+>
+<!ELEMENT semester (type,year,courses)>
+<!ELEMENT type (#PCDATA)>
+<!ELEMENT year (#PCDATA)>
+<!ELEMENT courses (course)+>
+<!ELEMENT course (name,faculty,studentsCount?,days,start,end,venue?,lab?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT faculty (#PCDATA)>
+<!ELEMENT studentsCount (#PCDATA)>
+<!ELEMENT venue (#PCDATA)>
+<!ELEMENT lab (days,start,end)>
+<!ELEMENT days (day)+>
+<!ELEMENT day (#PCDATA)>
+<!ELEMENT start (#PCDATA)>
+<!ELEMENT end (#PCDATA)>

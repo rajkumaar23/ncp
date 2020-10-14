@@ -1,0 +1,3 @@
+for $x in /university/semester
+where $x/year=2008 and $x/type='EVEN'
+return $x/courses

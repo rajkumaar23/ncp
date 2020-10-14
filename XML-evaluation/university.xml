@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<university xmlns="https://www.w3schools.com"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="https://www.w3schools.com university-database.xsd"> 
+  <semester> 
+    <type>ODD</type>  
+    <year>2008</year>  
+    <courses> 
+      <course> 
+        <name>Introduction to Database Management Systems</name>  
+        <faculty>Gupta</faculty>  
+        <days> 
+          <day>Monday</day>  
+          <day>Wednesday</day> 
+        </days>  
+        <start>09:00:00</start>  
+        <end>11:00:00</end>  
+        <venue>C402</venue>  
+        <lab> 
+          <days> 
+            <day>Friday</day> 
+          </days>  
+          <start>09:45:00</start>  
+          <end>12:20:00</end> 
+        </lab> 
+      </course>  
+      <course> 
+        <name>Advanced Database Management Systems</name>  
+        <faculty>Menon</faculty>  
+        <studentsCount>35</studentsCount>  
+        <days> 
+          <day>Monday</day>  
+          <day>Tuesday</day>  
+          <day>Thursday</day> 
+        </days>  
+        <start>13:10:00</start>  
+        <end>14:00:00</end>  
+        <venue>C401</venue> 
+      </course> 
+    </courses> 
+  </semester>  
+  <semester> 
+    <type>ODD</type>  
+    <year>2009</year>  
+    <courses> 
+      <course> 
+        <name>Introduction to Database Management Systems</name>  
+        <faculty>Dr. Priya</faculty>  
+        <studentsCount>63</studentsCount>  
+        <days> 
+          <day>Tuesday</day>  
+          <day>Thursday</day> 
+        </days>  
+        <start>15:00:00</start>  
+        <end>16:30:00</end>  
+        <venue>C405</venue>  
+        <lab> 
+          <days> 
+            <day>Thursday</day> 
+          </days>  
+          <start>14:10:00</start>  
+          <end>16:10:00</end> 
+        </lab> 
+      </course>  
+      <course> 
+        <name>Advanced Database Management Systems</name>  
+        <faculty>Shankar</faculty>  
+        <studentsCount>35</studentsCount>  
+        <days> 
+          <day>Monday</day>  
+          <day>Wednesday</day>  
+          <day>Friday</day> 
+        </days>  
+        <start>09:00:00</start>  
+        <end>10:00:00</end> 
+      </course> 
+    </courses> 
+  </semester> 
+</university>
